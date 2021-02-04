@@ -6,8 +6,7 @@ namespace uml
     {
         static void Main(string[] args)
         {
-            double CalculaImposto = (Produto.Preco * 10 %); 
-
+           
         }
     }
 }

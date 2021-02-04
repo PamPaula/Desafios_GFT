@@ -4,11 +4,18 @@ using System.Text;
 
 namespace uml
 {
-    class Livro
-    {
-        public Produto Livros { get; set; } 
-        public string Autor { get; set; }
-        public string Tema { get; set; }
-        public int QtdPag { get; set; }
+        class Livro : Produto
+        {
+            String Autor;
+            String Tema;
+            int qtdPag;
+
+            public override double calculaImposto()
+            {
+                if (Tema == "educativo")
+                    return 0;
+                else
+                    return Preco * 0.10;
+            }
+        }
     }
-}

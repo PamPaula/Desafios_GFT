@@ -4,11 +4,18 @@ using System.Text;
 
 namespace uml
 {
-    class VideoGame
+    class VideoGame : Produto
     {
-        public Produto Games { get; set; }
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public bool IsUsado { get; set; }
+        String Marca;
+        String Modelo;
+        bool isUsado;
+
+        public override double calculaImposto()
+        {
+            if (isUsado)
+                return Preco * 0.25;
+            else
+                return Preco * 0.45;
+        }
     }
 }

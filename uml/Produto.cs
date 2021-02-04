@@ -4,11 +4,18 @@ using System.Text;
 
 namespace uml
 {
-    class Produto
-    {
-        public string Nome { get; set; }
-        public double Preco { get; set; }
-        public int Qtd { get; set; }
+        abstract class Produto
+        {
+            String nome;
+            double preco;
+            int qtd;
 
+        public static object Livro { get; internal set; }
+        public string Nome { get => nome; set => nome = value; }
+            public double Preco { get => preco; set => preco = value; }
+            public int Qtd { get => qtd; set => qtd = value; }
+
+            public abstract double calculaImposto();
+        }
     }
 }
